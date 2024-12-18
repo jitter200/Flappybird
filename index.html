@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        #menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            z-index: 10;
+        }
+
+        #startMainGame, #startMiniGame {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #1165c5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #startMainGame:hover, #startMiniGame:hover {
+            background-color: #649ddf;
+        }
+
+        .game-title {
+            display: block;
+            margin: 0 auto;
+            width: 300px; /* Width of the title image */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Space below the title */
+        }
+
+        #titleAboveCanvas {
+            display: block;
+            margin: 10px auto;
+            width: 300px; /* Width of the title image */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <img src="{{ url_for('static', filename='images/title1.png') }}" alt="Flappy Bird" class="game-title">
+        <button id="startMainGame">Основная игра</button>
+        <button id="startMiniGame">Мини-игра</button>
+    </div>
+    
+    <!-- Заголовок перемещён из меню и добавлен отдельно -->
+    <img src="{{ url_for('static', filename='images/title1.png') }}" alt="Flappy Bird" class="game-title" id="titleAboveCanvas">
+    <canvas id="gameCanvas"></canvas>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+
+</html>
