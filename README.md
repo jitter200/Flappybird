@@ -50,7 +50,7 @@ This project is a web-based game inspired by the popular Flappy Bird. It is buil
    ```
 
 4. **Access the game:**
-   - Open your browser and navigate to `http://127.0.0.1:5000`.
+   - Open your browser
 
 ---
 
@@ -118,7 +118,7 @@ This project is a web-based game inspired by the popular Flappy Bird. It is buil
 
 ## License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
